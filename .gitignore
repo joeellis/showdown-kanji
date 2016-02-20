@@ -1,0 +1,15 @@
+# platform oddities
+.DS_Store
+
+# logs
+npm-debug.log
+
+# packages
+node_modules
+
+# compiled assets
+public/javascripts
+public/stylesheets
+
+#other
+.sublime-project
