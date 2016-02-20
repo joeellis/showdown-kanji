@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Showdown markdown extension for writing Japanese kanji and furigana using HTML5 <ruby> tags",
   "main": "index.js",
+  "repository": "github:joeellis/showdown-kanji",
   "scripts": {
     "test": "find ./test -name 'test-*' | xargs mocha"
   },
