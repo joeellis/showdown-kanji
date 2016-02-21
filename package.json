@@ -1,6 +1,6 @@
 {
   "name": "showdown-kanji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Showdown markdown extension for writing Japanese kanji and furigana using HTML5 <ruby> tags",
   "main": "index.js",
   "repository": "github:joeellis/showdown-kanji",
