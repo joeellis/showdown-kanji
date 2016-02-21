@@ -1,10 +1,10 @@
 var assert = require('assert');
 var Showdown = require('showdown');
-var furigana = require('../index.js');
+var kanjiExtension = require('../index.js');
 
-var showdown = new Showdown.Converter({extensions:[furigana]});
+var showdown = new Showdown.Converter({extensions:[ kanjiExtension ]});
 
-describe('Furigana Showdown Extension', function() {
+describe('Kanji Showdown Extension', function() {
   it('should convert marked kanji into furigana ruby tags', function () {
     var html = showdown.makeHtml("{漢}(かん){字}(じ)");
 
