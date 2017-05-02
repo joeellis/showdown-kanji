@@ -23,6 +23,24 @@ describe('Kanji Showdown Extension', function() {
     assert.equal(html, "<p><ruby>私<rt>わたし</rt></ruby>はジョーと<ruby>申<rt>もう</rt></ruby>します。</p>");
   });
 
+  it('should be able to handle multi-byte japanese braces', function () {
+    var html = showdown.makeHtml("｛私｝(わたし)はジョーと｛申｝(もう)します。");
+
+    assert.equal(html, "<p><ruby>私<rt>わたし</rt></ruby>はジョーと<ruby>申<rt>もう</rt></ruby>します。</p>");
+  });
+
+  it('should be able to handle a mix of utf-8 and japanese parens and braces', function () {
+    var html = showdown.makeHtml("{私｝(わたし)はジョーと｛申}(もう）します。");
+
+    assert.equal(html, "<p><ruby>私<rt>わたし</rt></ruby>はジョーと<ruby>申<rt>もう</rt></ruby>します。</p>");
+  });
+
+  it('should be able to handle japanese parens and braces', function () {
+    var html = showdown.makeHtml("｛私｝（わたし）はジョーと｛申｝（もう）します。");
+
+    assert.equal(html, "<p><ruby>私<rt>わたし</rt></ruby>はジョーと<ruby>申<rt>もう</rt></ruby>します。</p>");
+  });
+
   it('should convert kanji while not interfering with normal markdown accents', function () {
     var html = showdown.makeHtml("**これは**ジョーの{記}(き){事}(じ)です");
 
