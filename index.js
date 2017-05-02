@@ -1,5 +1,5 @@
-var patternRegex = /((\{[^\}]+\}(?:\（|\()[^\}]+(?:\）|\)))+)/g;
-var kanjiRegex = /\{([^\}]+)\}(?:\（|\()([^\}]+)(?:\）|\))/g;
+var patternRegex = /(((?:\{|\｛)[^\}\｝]+(?:\}|\｝)(?:\（|\()[^\}\｝]+(?:\）|\)))+)/g;
+var kanjiRegex = /(?:\{|\｛)([^\}\｝]+)(?:\}|\｝)(?:\（|\()([^\}\｝]+)(?:\）|\))/g;
 
 var KanjiExtension = function(converter) {
   return [
