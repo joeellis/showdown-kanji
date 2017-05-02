@@ -12,7 +12,7 @@ describe('Kanji Showdown Extension', function() {
   });
 
   it('should be able to handle multi-byte japanese parentheses', function () {
-    var html = showdown.makeHtml("{私}（わたし）はジョーと{申}（もう）します。");
+    var html = showdown.makeHtml("｛私｝（わたし）はジョーと｛申｝（もう）します。");
 
     assert.equal(html, "<p><ruby>私<rt>わたし</rt></ruby>はジョーと<ruby>申<rt>もう</rt></ruby>します。</p>");
   });
